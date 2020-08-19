@@ -1,0 +1,10 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <span class="navbar-brand">NgRx Authentication</span>
+    <ng-container *ngIf="isAuthenticated$ | async">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" (click)="logout()">Logout</a>
+            </li>
+        </ul>
+    </ng-container>
+</nav>

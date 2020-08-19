@@ -1,0 +1,4 @@
+<ng-container *ngIf="authenticatedUser$ | async as user">
+    <h5>Your e-mail: {{ user.email }}</h5>
+    <h6>Your ID: {{ user.id }}</h6>
+</ng-container>
