@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { Constants } from '../constants';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
 
   readonly API_ROOT = 'http://localhost:3000';
 
-  readonly TOKEN_NAME = 'authorization';
+  readonly TOKEN_NAME = Constants.TOKEN_NAME;
 
   constructor(private http: HttpClient) { }
 

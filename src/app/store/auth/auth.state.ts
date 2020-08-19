@@ -1,4 +1,5 @@
 import { User } from 'src/app/model/user';
+import { Constants } from 'src/app/constants';
 
 export interface AuthState {
     isAuthenticated: boolean;
@@ -7,7 +8,7 @@ export interface AuthState {
 }
 
 export const initialAuthState: AuthState = {
-    isAuthenticated: !!localStorage.getItem('Authorization'),
+    isAuthenticated: !!localStorage.getItem(Constants.TOKEN_NAME),
     authenticatedUser: null,
     errorMessage: null
 }
